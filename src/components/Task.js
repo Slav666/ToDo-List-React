@@ -4,7 +4,7 @@ const Task = (props) => {
     return ( 
         <div>
             <p>
-            {props.task.text}<span>{props.task.date}</span><button onClick={()=> console.log("done")}>I have done it</button><button onClick={()=> console.log("delete")}>x</button>
+            {props.task.text}<span>{props.task.date}</span><button onClick={() => props.changeStatus(props.task.id)}>I have done it</button><button onClick={() => props.delete(props.task.id)}>x</button>
             </p>
            
         </div>

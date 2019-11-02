@@ -43,19 +43,19 @@ class App extends Component {
     ]
   }
 
-  deleteTask =()=> {
-    console.log("delete")
+  deleteTask = (id) => {
+    console.log("delete element with id " + id)
   }
 
-  changeTaskStatus = () => {
-    console.log("change")
+  changeTaskStatus = (id) => {
+    console.log("change element with id " + id)
   }
   render() {
     return (
       <div className="App">
       ToDo List
       <AddTask/>
-      <TaskList tasks={this.state.tasks} delete={this.deleteTask} changeStatus={this.changeDeleteStatus}/>
+      <TaskList tasks={this.state.tasks} delete={this.deleteTask} changeStatus={this.changeTaskStatus}/>
       </div>
     );
   }
