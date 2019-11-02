@@ -10,7 +10,7 @@ class App extends Component {
     tasks: [
       {
       id: 0,
-      text: 'play in The Witcher 3 gamme ',
+      text: 'Play in The Witcher-3 game ',
       date: '2019-11-01',
       important: true,
       active: true,
@@ -45,7 +45,7 @@ class App extends Component {
 
   deleteTask = (id) => {
     const tasks = [...this.state.tasks];
-    const index = tasks.indexOf(task => task.id === id);
+    const index = tasks.findIndex(task => task.id === id);
     tasks.splice(index, 1);
     this.setState({tasks})
     // console.log(tasks)

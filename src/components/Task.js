@@ -3,22 +3,30 @@ import React from 'react';
 const Task = (props) => {
 
     const style = {color: 'red'};
+    const {text, date, id, active, important, finishDate} = props.task;
 
-    if (props.task.active) {
+    if (active) {
     return ( 
         <div>
             <p>
-            <strong style={props.task.important ? style : null}>{props.task.text}</strong><span>{props.task.date}
-            </span><button onClick={() => props.changeStatus(props.task.id)}>I have done it</button>
-            <button onClick={() => props.delete(props.task.id)}>x</button>
+            <strong style={important ? style : null}>{text}</strong><span>{date}</span>
+            <button onClick={() => props.changeStatus(id)}>I have done it</button>
+            <button onClick={() => props.delete(id)}>x</button>
             </p>
            
         </div>
            
-    );} else {
+    );
+} else {
+        const finish = new Date(finishDate).toDateString()
         return(
         <div>
-            Task done
+            <p>
+            <strong>{text}</strong> <em>(Will be done: {date})</em>
+            <br/>
+            - Task finished: <span>{finish}</span>
+            <button onClick={() => props.delete(id)}>x</button>
+            </p>
         </div>
         )
     }
