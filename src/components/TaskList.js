@@ -12,11 +12,11 @@ const TaskList = (props) => {
         <>
             <div className="active">
                 <h1>Tasks to do</h1>
-                {activeTasks}
+                {activeTasks.length > 0 ? activeTasks : <p>No more tasks left</p>}
             </div>
             <hr/>
             <div className="done">
-                <h2>Tasks finalised (0)</h2>
+                <h2>Tasks finalised <em>({done.length})</em></h2>
                 {doneTasks}
             </div>
         </>
