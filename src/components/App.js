@@ -40,15 +40,22 @@ class App extends Component {
       active: true,
       finishDate: null,
     },
-    
     ]
+  }
+
+  deleteTask =()=> {
+    console.log("delete")
+  }
+
+  changeTaskStatus = () => {
+    console.log("change")
   }
   render() {
     return (
       <div className="App">
       ToDo List
       <AddTask/>
-      <TaskList tasks={this.state.tasks}/>
+      <TaskList tasks={this.state.tasks} delete={this.deleteTask} changeStatus={this.changeDeleteStatus}/>
       </div>
     );
   }
