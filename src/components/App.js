@@ -10,20 +10,37 @@ class App extends Component {
     tasks: [
       {
       id: 0,
-      text: 'play in The Witcher 3 gamme',
+      text: 'play in The Witcher 3 gamme ',
       date: '2019-11-01',
       important: true,
       active: true,
       finishDate: null,
     },
     {
-      id: 0,
-      text: 'Learn React every day',
+      id: 1,
+      text: 'Learn React every day ',
       date: '2019-11-01',
       important: true,
       active: true,
       finishDate: null,
     },
+    {
+      id: 2,
+      text: 'Become the local gym member ',
+      date: '2019-11-01',
+      important: true,
+      active: true,
+      finishDate: null,
+    },
+    {
+      id: 3,
+      text: 'Start to build new plastic model ',
+      date: '2019-11-01',
+      important: true,
+      active: true,
+      finishDate: null,
+    },
+    
     ]
   }
   render() {
