@@ -1,15 +1,17 @@
+import React from 'react';
+import Task from './Task'
 
-import React, {Component} from 'react';
-
-class TaskList extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <div>
-               <div>This is TaskList</div> 
-            </div>
-         );
-    }
+const TaskList = () => {
+    return ( 
+        <div>
+            <h2>Tasks List</h2>
+            <Task/>
+            <Task/>
+            <Task/>
+        </div>
+        
+    );
+    
 }
  
 export default TaskList;
