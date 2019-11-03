@@ -10,7 +10,7 @@ class  AddTask extends Component {
         text: '',
         checked: false,
         date: this.minDate
-     }
+    }
 
      handleDate = (e) => {
         this.setState(
@@ -28,6 +28,18 @@ class  AddTask extends Component {
            {checked: e.target.checked}
         )
     }
+
+    handleClick = () => {
+        console.log("Add object");
+        const add = this.props.add();
+        if(add) {
+            this.setState({
+                text: '',
+                checked: false,
+                date: this.minDate
+            })
+        }
+    }
     render() { 
         let maxDate = this.minDate.slice(0,4) * 1 + 1;
         maxDate = maxDate + "-12-31";
@@ -39,9 +51,9 @@ class  AddTask extends Component {
                 <br/>
                 <label htmlFor="date">When should be finised:</label>
                 <input type="date" value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handleDate}/>
-                <button>ADD</button>
+                <button onClick={this.handleClick}>ADD</button>
             </div>
-         );
+        );
     }
 }
  
