@@ -28,10 +28,10 @@ class  AddTask extends Component {
            {checked: e.target.checked}
         )
     }
-
+// handleClick method to clear an user input
     handleClick = () => {
         console.log("Add object");
-        const add = this.props.add();
+        const add = this.props.add(this.state.text, this.state.checked, this.state.date);
         if(add) {
             this.setState({
                 text: '',

@@ -6,6 +6,8 @@ import TaskList from './TaskList';
 
 class App extends Component {
 
+  counter = 5;
+
   state = {
     tasks: [
       {
@@ -64,10 +66,24 @@ class App extends Component {
     // console.log("change element with id " + id)
   }
 
-  handleAddTask(){
-    console.log("Object Added");
+  handleAddTask = (text, date, important) => {
+    // console.log("Object Added");
+    const task = {
+      id: this.counter,
+      text: text,
+      date: date,
+      important: important,
+      active: true,
+      finishDate: null,
+    }
+    this.counter++
+    // console.log(task, this.counter);
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, task]
+    }))
     return true;
   }
+    
 
   render() {
     return (
