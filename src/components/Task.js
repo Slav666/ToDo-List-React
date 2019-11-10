@@ -10,8 +10,8 @@ const Task = (props) => {
         <div>
             <p>
             <strong style={important ? style : null}>{text}</strong><span>{date}</span>
-            <button onClick={() => props.changeStatus(id)}>I have done it</button>
-            <button onClick={() => props.delete(id)}>x</button>
+            <button id="doneButton"onClick={() => props.changeStatus(id)}>DONE</button>
+            <button id="removeButton"onClick={() => props.delete(id)}>REMOVE</button>
             </p>
            
         </div>
@@ -25,7 +25,7 @@ const Task = (props) => {
             <strong>{text}</strong> <em>(Will be done: {date})</em>
             <br/>
             - Task finished: <span>{finish}</span>
-            <button onClick={() => props.delete(id)}>x</button>
+            <button id="removeButton" onClick={() => props.delete(id)}>REMOVE</button>
             </p>
         </div>
         )

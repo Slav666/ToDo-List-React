@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import './AddTask.css'
+
 
 class  AddTask extends Component {
 
@@ -51,7 +51,7 @@ class  AddTask extends Component {
                 <br/>
                 <label htmlFor="date">When should be finised:</label>
                 <input type="date" value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handleDate}/>
-                <button onClick={this.handleClick}>ADD</button>
+                <button id="addTaskButton"onClick={this.handleClick}>ADD TASK</button>
             </div>
         );
     }
